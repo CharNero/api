@@ -1,0 +1,45 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development nodemon --exec ts-node -- src/app.ts",
+    "serve:babel": "cross-env NODE_ENV=development nodemon --exec babel-node -- -x \".ts\"  -- src/app.ts",
+    "ts": "cross-env NODE_ENV=development ts-node src/app.ts",
+    "babel": "cross-env NODE_ENV=development babel-node -x .ts src/app.ts",
+    "build:tsc": "tsc",
+    "start": "node ./dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/node": "^14.6.0",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "babel-node": "0.0.1-security",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.3.1",
+    "koa": "^2.13.0",
+    "koa-router": "^9.1.0"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@koa/router": "^9.1.0",
+    "@types/koa": "^2.11.3",
+    "@types/koa-router": "^7.4.1",
+    "@types/mongoose": "^5.7.29",
+    "koa-swagger-decorator": "^1.6.1",
+    "mongoose": "^5.9.21",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.6"
+  }
+}
